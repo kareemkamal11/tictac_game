@@ -27,11 +27,11 @@ class _HomeScreenState extends State<HomeScreen> {
         updateState();
       }
     } else if (isSwitched && !gameOver) {
-      if ((Player.playerX.isEmpty || !Player.playerX.contains(index)) &&
-          (Player.playerO.isEmpty || !Player.playerO.contains(index))) {
+      if (Player.playerX.length + Player.playerO.length < 9) {
         game.playGame(index, activePlayer);
         updateState();
-      }
+      } 
+
     }
   }
 
